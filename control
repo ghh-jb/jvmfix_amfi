@@ -1,0 +1,9 @@
+Package: c.ghh.jvmfix
+Name: jvmfix
+Version: 1.0~beta1
+Architecture: macosx
+Description: Fix foe libjvm.dylib SIGBUS crash in CodeHeap::allocate when AMFI is disabled via boot-args amfi_get_out_of_my_way=1
+Maintainer: untether
+Author: untether
+Section: System
+Tag: role::hacker
