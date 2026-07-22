@@ -1,5 +1,5 @@
 TARGET := macosx:clang:latest:12.0
-export ARCHS = arm64 arm64e
+export ARCHS = arm64 arm64e x86_64
 include $(THEOS)/makefiles/common.mk
 
 LIBRARY_NAME = jvmfix_noamfi
