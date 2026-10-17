@@ -4,13 +4,26 @@
 #include <spawn.h>
 #include <signal.h>
 #include <string.h>
+#include <stdarg.h>
+
+#define DEBUG_BUILD 1
+
+void debug(char *format, ...) {
+    if (!DEBUG_BUILD) return;
+    va_list args;
+    va_start(args, format);
+    printf("[DEBUG] ");
+    vprintf(format, args);
+    va_end(args);
+    return;
+}
 
 extern void pthread_jit_write_protect_np(int enabled);
 
 void fixprot(int sig, siginfo_t *info, void *ucontext) {
-	printf("[+] SIGBUS handler activated, fixing JIT...\n");
+	debug("SIGBUS handler activated, fixing JIT...\n");
 	pthread_jit_write_protect_np(0);
-	printf("[+] Permissions fixed, continuing execution.\n");
+	debug("Permissions fixed, continuing execution.\n");
 }
 
 extern void** environ;
