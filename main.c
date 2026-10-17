@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdarg.h>
 
-#define DEBUG_BUILD 1
+#define DEBUG_BUILD 0
 
 void debug(char *format, ...) {
     if (!DEBUG_BUILD) return;
