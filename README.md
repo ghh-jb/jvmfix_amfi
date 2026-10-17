@@ -4,7 +4,7 @@ Library that should be preloaded (via DYLD_INSERT_LIBRARIES) to java for it to w
 # Problem
 https://github.com/corretto/corretto-11/issues/385
 
-I really wanted to play minecraft wth friesnd but because I was planning to use vPhone as research machine I disabled AMFI and ran into this issue.
+I really wanted to play minecraft with friends but because I was planning to use vPhone as research machine I disabled AMFI and ran into this issue.
 
 # Build
 1. Install theos and Xcode
